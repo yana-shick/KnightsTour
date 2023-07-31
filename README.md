@@ -14,6 +14,8 @@ Drug a knight figure to a chess board and press start.
 
 When the tour is over press again to enable another round.
 
+<img src="/img/knight-preview-Small.jpg" alt= “Preview” width="350px" height="350px">
+
 ## Learning targets
 
 + Learnning async functions with await and promise.
