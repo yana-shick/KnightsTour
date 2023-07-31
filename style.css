@@ -1,0 +1,257 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    text-align: center;
+}
+
+h1 {
+    font-size: 60px;
+    margin-bottom: 20px;
+}
+
+#main {
+    display: flex;
+    grid-gap: 100px;
+    padding-left: 100px;
+    padding-right: 100px;
+}
+
+/* BOARD ------------------------------------------------------------------ */
+
+#board-container {
+    width: calc(640px + (100% - 640px)/2);
+    display: flex;
+    justify-content: end;
+}
+
+#board {
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(8, calc(100% / 8));
+    grid-template-rows: repeat(8, calc(100% / 8));
+    width: 640px;
+    height: 640px;
+    border: 1px solid #ba8d60;
+    flex-shrink: 0;
+}
+
+.tile {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #000000;
+    font-size: 40px;
+}
+
+.black {
+    background-color: #ba8d60;
+}
+
+#numbers {
+    position: absolute;
+    left: -50px;
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+    justify-content: space-around;
+    list-style: none;
+    height: 640px;
+    font-size: 40px;
+}
+
+#letters {
+    position: absolute;
+    bottom: -60px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    list-style: none;
+    width: 640px;
+    font-size: 40px;
+}
+
+/* MENU-------------------------------------------------------------------- */
+
+#menu {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    height: 413px;
+    text-transform: uppercase;
+}
+
+#menu-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    height: 300px;
+}
+
+#knight-home {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 80px;
+    height: 80px;
+
+}
+
+#drugKnight {
+    position: absolute;
+    color: black;
+    font-size: 60px;
+    width: 80px;
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
+    transition: none;
+}
+
+#start-button,
+#again {
+    width: 150px;
+    height: 80px;
+    border-radius: 20px;
+    font-size: 50px;
+    line-height: 120%;
+    display: flex;
+    justify-content: center;
+}
+
+
+/* MOBILE-VERSION-360px---------------------------------------------------- */
+
+
+
+@media(max-width:360px) {
+    h1 {
+        font-size: 35px;
+        margin-bottom: 8px;
+    }
+
+    #main {
+        flex-direction: column;
+        grid-gap: 50px;
+        padding-left: 0px;
+        padding-right: 0px;
+    }
+
+    /* BOARD-MOBILE-------------------------------------------------------- */
+
+    #board-container {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+
+    #board {
+        position: relative;
+        display: grid;
+        grid-template-columns: repeat(8, calc(100% / 8));
+        grid-template-rows: repeat(8, calc(100% / 8));
+        width: 280px;
+        height: 280px;
+        border: 1px solid #9e6f41;
+        flex-shrink: 0;
+    }
+
+    .tile {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: #000000;
+        font-size: 20px;
+    }
+
+    #numbers {
+        position: absolute;
+        left: -20px;
+        display: flex;
+        flex-direction: column-reverse;
+        align-items: center;
+        justify-content: space-around;
+        list-style: none;
+        height: 280px;
+        font-size: 20px;
+    }
+
+    #letters {
+        position: absolute;
+        bottom: -30px;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        list-style: none;
+        width: 280px;
+        font-size: 20px;
+    }
+
+
+    /* MENU-MOBILE------------------------------------------------------------- */
+
+    #menu {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+        height: 150px;
+        width: 280px;
+        margin: auto;
+        text-transform: uppercase;
+    }
+
+    #menu-content {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-around;
+        height: 100px;
+        width: 100%;
+    }
+
+    h2 {
+        font-size: 20px;
+    }
+
+    #knight-home {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 35px;
+        height: 35px;
+
+    }
+
+    #drugKnight {
+        position: absolute;
+        color: black;
+        font-size: 35px;
+        width: 35px;
+        height: 35px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-shrink: 0;
+    }
+
+    #start-button,
+    #again {
+        width: 80px;
+        height: 35px;
+        border-radius: 10px;
+        font-size: 25px;
+        line-height: 100%;
+        display: flex;
+        justify-content: center;
+
+    }
+}

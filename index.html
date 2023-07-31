@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Knight's Tour</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='style.css'>
+</head>
+
+<body>
+    <h1>Knight's Tour</h1>
+    <div id="main">
+        <div id="board-container">
+            <div id="board">
+                <ul id="numbers"></ul>
+                <ul id="letters"></ul>
+            </div>
+        </div>
+
+        <div id="menu">
+            <h2>drug a knight to a board and press start</h2>
+            <div id="menu-content">
+                <div id="knight-home">
+                    <div id="drugKnight" draggable="true">&#9822;</div>
+                </div>
+                <button id='start-button' onclick="start()">start</button>
+                <button id="again" onclick="again()">again</button>
+            </div>
+        </div>
+    </div>
+    <script src=' main.js'>
+    </script>
+</body>
+
+</html>
